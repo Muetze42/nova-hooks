@@ -1,6 +1,6 @@
 {
     "name": "norman-huth/nova-hooks",
-    "description": "Add hooks to Laravel Nova components",
+    "description": "Add hooks to Laravel Nova",
     "keywords": [
         "laravel",
         "nova",

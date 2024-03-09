@@ -1,5 +1,12 @@
 <template>
-  <Hooks :hooks="hooks.pages.Replicate.before" />
+  <Hooks
+    :hooks="hooks.pages.Replicate.before"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
   <CreateForm
     @resource-created="handleResourceCreated"
     @create-cancelled="handleCreateCancelled"
@@ -13,7 +20,14 @@
     :should-override-meta="true"
     :form-unique-id="formUniqueId"
   />
-  <Hooks :hooks="hooks.pages.Replicate.after" />
+  <Hooks
+    :hooks="hooks.pages.Replicate.after"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
 </template>
 
 <script>

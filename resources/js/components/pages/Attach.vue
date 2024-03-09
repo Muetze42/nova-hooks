@@ -1,5 +1,12 @@
 <template>
-  <Hooks :hooks="hooks.pages.Attach.before" />
+  <Hooks
+    :hooks="hooks.pages.Detail.before"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :relatedResourceName="relatedResourceName"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
   <AttachResource
     :resource-name="resourceName"
     :resource-id="resourceId"
@@ -11,7 +18,14 @@
     :polymorphic="polymorphic"
     :form-unique-id="formUniqueId"
   />
-  <Hooks :hooks="hooks.pages.Attach.after" />
+  <Hooks
+    :hooks="hooks.pages.Detail.after"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :relatedResourceName="relatedResourceName"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
 </template>
 
 <script>

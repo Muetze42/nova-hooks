@@ -1,5 +1,11 @@
 <template>
-  <Hooks :hooks="hooks.pages.Create.before" />
+  <Hooks
+    :hooks="hooks.pages.Detail.before"
+    :resourceName="resourceName"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
   <ResourceCreate
     :resource-name="resourceName"
     :via-resource="viaResource"
@@ -7,7 +13,13 @@
     :via-relationship="viaRelationship"
     mode="form"
   />
-  <Hooks :hooks="hooks.pages.Create.after" />
+  <Hooks
+    :hooks="hooks.pages.Detail.after"
+    :resourceName="resourceName"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :viaRelationship="viaRelationship"
+  />
 </template>
 
 <script>

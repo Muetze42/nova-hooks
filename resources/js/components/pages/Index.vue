@@ -1,11 +1,17 @@
 <template>
-  <Hooks :hooks="hooks.pages.Index.before" />
+  <Hooks
+    :hooks="hooks.pages.Index.before"
+    :resourceName="resourceName"
+  />
   <ResourceIndex
     :resourceName="resourceName"
     :shouldOverrideMeta="true"
     :shouldEnableShortcut="true"
   />
-  <Hooks :hooks="hooks.pages.Index.after" />
+  <Hooks
+    :hooks="hooks.pages.Index.after"
+    :resourceName="resourceName"
+  />
 </template>
 
 <script>

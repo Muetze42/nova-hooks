@@ -1,7 +1,7 @@
 <template>
-  <Hooks :hooks="hooks.pages.Dashboard.before" />
+  <Hooks :hooks="hooks.pages.Dashboard.before" :name="name" />
   <DashboardView :name="name" />
-  <Hooks :hooks="hooks.pages.Dashboard.after" />
+  <Hooks :hooks="hooks.pages.Dashboard.after" :name="name" />
 </template>
 
 <script>

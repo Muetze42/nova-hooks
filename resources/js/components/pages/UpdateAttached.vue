@@ -1,5 +1,16 @@
 <template>
-  <Hooks :hooks="hooks.pages.UpdateAttached.before" />
+  <Hooks
+    :hooks="hooks.pages.UpdateAttached.before"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :relatedResourceName="relatedResourceName"
+    :relatedResourceId="relatedResourceId"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :parentResource="parentResource"
+    :viaRelationship="viaRelationship"
+    :viaPivotId="viaPivotId"
+  />
   <UpdateAttachedResource
     :resource-name="resourceName"
     :resource-id="resourceId"

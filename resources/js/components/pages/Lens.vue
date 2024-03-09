@@ -1,11 +1,11 @@
 <template>
-  <Hooks :hooks="hooks.pages.Lens.before" />
+  <Hooks :hooks="hooks.pages.Lens.before" :lens="lens" />
   <ResourceLens
     :resourceName="resourceName"
     :lens="lens"
     :searchable="searchable"
   />
-  <Hooks :hooks="hooks.pages.Lens.after" />
+  <Hooks :hooks="hooks.pages.Lens.after" :lens="lens" />
 </template>
 
 <script>
