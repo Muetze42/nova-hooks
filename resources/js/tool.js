@@ -15,9 +15,9 @@ Nova.booting((app, store) => {
   Nova.pages['Nova.ForgotPassword'] = require('./components/pages/ForgotPassword').default
   Nova.pages['Nova.Index'] = require('./components/pages/Index').default
   Nova.pages['Nova.Lens'] = require('./components/pages/Lens').default
-  Nova.pages['Nova.Login'] = require('./components/pages/Login').default
+  // Nova.pages['Nova.Login'] = require('./components/pages/Login').default // Not working.
   Nova.pages['Nova.Replicate'] = require('./components/pages/Replicate').default
-  Nova.pages['Nova.ResetPassword'] = require('./components/pages/ResetPassword').default
+  // Nova.pages['Nova.ResetPassword'] = require('./components/pages/ResetPassword').default // Not working.
   Nova.pages['Nova.Update'] = require('./components/pages/Update').default
   Nova.pages['Nova.UpdateAttached'] = require('./components/pages/UpdateAttached').default
 })

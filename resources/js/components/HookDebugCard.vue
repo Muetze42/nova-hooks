@@ -1,8 +1,11 @@
 <script setup>
-defineProps(['data'])
+defineProps(['componentData'])
 </script>
 <template>
-<div>
-  {{ data }}
-</div>
+  <Card class="p-4">
+    <h2 class="font-medium text-lg">Hook</h2>
+    <code class="font-mono">
+      {{ componentData }}
+    </code>
+  </Card>
 </template>

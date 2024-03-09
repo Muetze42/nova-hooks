@@ -13,6 +13,8 @@ import ResourceIndex from '@/views/Index'
 import UpdateAttached from '@/views/UpdateAttached'
 import { Button } from 'laravel-nova-ui'
 import { Head } from '@inertiajs/inertia-vue3'
+import Card from '@/components/Card'
+import Heading from '@/components/Heading'
 
 Vue.component('Hooks', Hooks)
 Vue.component('CustomError403', CustomError403)
@@ -29,6 +31,8 @@ Vue.component('ResourceIndex', ResourceIndex)
 Vue.component('CreateForm', CreateForm)
 Vue.component('Button', Button)
 Vue.component('UpdateAttachedResource', UpdateAttached)
+Vue.component('Card', Card)
+Vue.component('Heading', Heading)
 Vue.mixin({
   methods: {
     __(key, replace = {}) {
@@ -84,15 +88,7 @@ Vue.mixin({
             before: [],
             after: [],
           },
-          Login: {
-            before: [],
-            after: [],
-          },
           Replicate: {
-            before: [],
-            after: [],
-          },
-          ResetPassword: {
             before: [],
             after: [],
           },

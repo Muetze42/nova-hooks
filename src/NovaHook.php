@@ -31,12 +31,8 @@ class NovaHook
         'pages.Index.before' => [],
         'pages.Lens.after' => [],
         'pages.Lens.before' => [],
-        'pages.Login.after' => [],
-        'pages.Login.before' => [],
         'pages.Replicate.after' => [],
         'pages.Replicate.before' => [],
-        'pages.ResetPassword.after' => [],
-        'pages.ResetPassword.before' => [],
         'pages.Update.after' => [],
         'pages.Update.before' => [],
         'pages.UpdateAttached.after' => [],
@@ -76,12 +72,8 @@ class NovaHook
             'pages.Index.before',
             'pages.Lens.after',
             'pages.Lens.before',
-            'pages.Login.after',
-            'pages.Login.before',
             'pages.Replicate.after',
             'pages.Replicate.before',
-            'pages.ResetPassword.after',
-            'pages.ResetPassword.before',
             'pages.Update.after',
             'pages.Update.before',
             'pages.UpdateAttached.after',
@@ -95,5 +87,15 @@ class NovaHook
             'component' => $component,
             'componentData' => $componentData,
         ];
+    }
+
+    /**
+     * Debug the Laravel Nova hooks.
+     */
+    public static function debug(): void
+    {
+        foreach (array_keys(static::$hooks) as $hook) {
+            static::addHook($hook, 'HookDebugCard', $hook);
+        }
     }
 }
