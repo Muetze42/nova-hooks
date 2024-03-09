@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./../../vendor/laravel/nova/resources/js/*"],
+            "@nova_modules/*": ["./../../vendor/laravel/node_modules/*"]
+        }
+    }
+}

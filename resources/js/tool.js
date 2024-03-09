@@ -1,19 +1,23 @@
-import AttachResource from './Components/AttachResource.vue'
-import CustomAppError from './Components/CustomAppError.vue'
-import CustomError403 from './Components/CustomError403.vue'
-import CustomError404 from './Components/CustomError404.vue'
-import ResourceDetail from './Components/ResourceDetail.vue'
-import ResourceIndex from './Components/ResourceIndex.vue'
-import UpdateAttachedResource from './Components/UpdateAttachedResource.vue'
-import Hooks from './Components/Hooks.vue'
+import Hooks from './components/Hooks.vue'
+import HookDebugCard from './components/HookDebugCard.vue'
 
 Nova.booting((app, store) => {
   app.component('Hooks', Hooks)
-  app.component('AttachResource', AttachResource)
-  app.component('CustomAppError', CustomAppError)
-  app.component('CustomError403', CustomError403)
-  app.component('CustomError404', CustomError404)
-  app.component('ResourceDetail', ResourceDetail)
-  app.component('ResourceIndex', ResourceIndex)
-  app.component('UpdateAttachedResource', UpdateAttachedResource)
+  app.component('HookDebugCard', HookDebugCard)
+  // Todo: Automatic include all files from directory?
+  Nova.pages['Nova.Attach'] = require('./components/pages/Attach').default
+  Nova.pages['Nova.Create'] = require('./components/pages/Create').default
+  Nova.pages['Nova.Dashboard'] = require('./components/pages/Dashboard').default
+  Nova.pages['Nova.Detail'] = require('./components/pages/Detail').default
+  Nova.pages['Nova.Error'] = require('./components/pages/AppError').default
+  Nova.pages['Nova.Error403'] = require('./components/pages/Error403').default
+  Nova.pages['Nova.Error404'] = require('./components/pages/Error404').default
+  Nova.pages['Nova.ForgotPassword'] = require('./components/pages/ForgotPassword').default
+  Nova.pages['Nova.Index'] = require('./components/pages/Index').default
+  Nova.pages['Nova.Lens'] = require('./components/pages/Lens').default
+  Nova.pages['Nova.Login'] = require('./components/pages/Login').default
+  Nova.pages['Nova.Replicate'] = require('./components/pages/Replicate').default
+  Nova.pages['Nova.ResetPassword'] = require('./components/pages/ResetPassword').default
+  Nova.pages['Nova.Update'] = require('./components/pages/Update').default
+  Nova.pages['Nova.UpdateAttached'] = require('./components/pages/UpdateAttached').default
 })

@@ -8,7 +8,7 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{yml,yaml,js,vue,css,scss,cjs}]
+[*.{yml,yaml,js,vue,css,scss,cjs,json}]
 indent_size = 2
 
 [{*.ctp,*.hphp,*.inc,*.module,*.php,*.php4,*.php5,*.phtml}]
