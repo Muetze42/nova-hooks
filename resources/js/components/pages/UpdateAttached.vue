@@ -24,7 +24,18 @@
     :polymorphic="polymorphic"
     :form-unique-id="formUniqueId"
   />
-  <Hooks :hooks="hooks.pages.UpdateAttached.after" />
+  <Hooks
+    :hooks="hooks.pages.UpdateAttached.after"
+    :resourceName="resourceName"
+    :resourceId="resourceId"
+    :relatedResourceName="relatedResourceName"
+    :relatedResourceId="relatedResourceId"
+    :viaResource="viaResource"
+    :viaResourceId="viaResourceId"
+    :parentResource="parentResource"
+    :viaRelationship="viaRelationship"
+    :viaPivotId="viaPivotId"
+  />
 </template>
 
 <script>
